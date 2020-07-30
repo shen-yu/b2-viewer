@@ -1,0 +1,62 @@
+.layout {
+  background: #fff;
+}
+.header {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    margin-top: -5px;
+  }
+}
+.content {
+  min-width: 600px;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.swipeArrowLeft,.swipeArrowRight{
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgba(255,255,255,.5);
+  background-color: rgba(0,0,0,.1);
+  transition: all .2s ease;
+  &:hover{
+    background-color: rgba(0,0,0,.5);
+  }
+}
+.legend{
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  cursor: pointer;
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 6px;
+  opacity: .5;
+  transition: all .2s ease;
+  &:hover{
+    opacity: 1;
+  }
+}
+.customCarousel{
+  :global {
+    .carousel{
+      .slide{
+        background: transparent;
+      }
+    }
+  }
+}
