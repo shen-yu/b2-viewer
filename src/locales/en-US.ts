@@ -1,6 +1,7 @@
 export default {
     LANGUAGE: '中文',
     LOGIN: 'Login',
+    LOGIN_SUCCESS: 'Login Success!',
     TIP_ID: 'Please input your applicationKeyId',
     TIP_KEY: 'Please input your applicationKey',
     FILE_NAME: 'fileName',

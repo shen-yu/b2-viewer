@@ -35,7 +35,7 @@ export default () => {
                 window.localStorage.setItem('authorizationToken', res.authorizationToken);
                 window.localStorage.setItem('apiUrl', res.apiUrl);
                 window.localStorage.setItem('downloadUrl', res.downloadUrl);
-                message.success('登录成功！')
+                message.success(intl.formatMessage({ id: 'LOGIN_SUCCESS' }))
             }
         }).catch((err: any) => {
             console.log(err)

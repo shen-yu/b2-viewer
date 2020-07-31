@@ -1,6 +1,7 @@
 export default {
     LANGUAGE: 'English',
     LOGIN: '登录',
+    LOGIN_SUCCESS: '登录成功！',
     TIP_ID: '请输入你的applicationKeyId',
     TIP_KEY: '请输入你的applicationKey',
     FILE_NAME: '文件名',

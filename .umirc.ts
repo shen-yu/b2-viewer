@@ -6,7 +6,7 @@ export default defineConfig({
     "primary-color": "#cf1322",
   },
   locale: {
-    default: 'zh-CN',
+    default: 'en-US',
     antd: false,
     title: false,
     baseNavigator: true,
@@ -22,11 +22,6 @@ export default defineConfig({
       target: "https://api000.backblazeb2.com/b2api/v2",
       changeOrigin: true,
       pathRewrite: { '^/api': '' },
-    },
-    '/upload': {
-      target: "https://pod-000-1063-10.backblaze.com/b2api/v2/b2_upload_file/3416867833a2eee878260719/c000_v0001063_t0001",
-      changeOrigin: true,
-      pathRewrite: { '^/upload': '' },
     },
   },
   nodeModulesTransform: {

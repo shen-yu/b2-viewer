@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useReducer } from 'react';
 import { useIntl, getLocale, getAllLocales, setLocale } from 'umi';
-import { Button } from 'antd'
+import { Button, Divider, message } from 'antd'
+import { CopyOutlined } from '@ant-design/icons';
 import AppContext from './createContext'
+import copy from 'copy-to-clipboard';
 import styles from './index.less';
 import { Layout, } from 'antd'
 import reducer from './reducer'
@@ -24,8 +26,22 @@ export default () => {
     setLocale(nextLocale, false);
   };
 
+  const handleCopy = (v: string) => {
+    if (copy(v)) {
+      message.success(intl.formatMessage({ id: 'COPY_LINK_SUCCESS' }));
+    } else {
+      message.warn(intl.formatMessage({ id: 'COPY_LINK_FAIL' }));
+    }
+  }
+
   const loginedPad = (
-    <div style={{ marginBottom: 10 }}>AccountId：{window.localStorage.getItem('accountId')}</div>
+    <div className={styles.loginedPad}>
+      <span>accountId：{window.localStorage.getItem('accountId')}</span>
+      <Divider type="vertical" style={{ margin: '0 15px' }} />
+      apiUrl<a onClick={() => handleCopy(window.localStorage.getItem('apiUrl'))}><CopyOutlined /></a>
+      <Divider type="vertical" style={{ margin: '0 15px' }} />
+      downloadUrl<a onClick={() => handleCopy(window.localStorage.getItem('downloadUrl'))}><CopyOutlined /></a>
+    </div>
   )
 
   useEffect(() => {
@@ -48,7 +64,7 @@ export default () => {
           {!loginStatus ? <Login /> : loginedPad}
           <FileList />
         </Content>
-        <Footer style={{ textAlign: 'center' }}>B2Viewer ©2020 Created by <a href="https://github.com/Shen-Yu">Shen-Yu</a></Footer>
+        <Footer style={{ textAlign: 'center' }}><a href="https://github.com/Shen-Yu/b2-viewer">B2Viewer</a> ©2020 Created by <a href="https://github.com/Shen-Yu">Shen-Yu</a></Footer>
       </Layout>
     </AppContext.Provider>
   );

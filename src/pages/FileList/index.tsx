@@ -54,7 +54,7 @@ export default () => {
         {
             title: intl.formatMessage({ id: 'FILE_NAME' }),
             dataIndex: 'fileName',
-            width: 450,
+            width: 380,
             textWrap: 'word-break',
             ellipsis: true,
             key: 'fileName',
@@ -102,9 +102,9 @@ export default () => {
                 const jumpUrl = `${BASE_URL}/file/${nowBucket}/${r.fileName}`;
                 return (
                     <>
-                        <Button onClick={() => handlePreview(t, r, jumpUrl)} ghost type="primary" size="small">{intl.formatMessage({ id: 'PREVIEW' })}</Button>
+                        <Button onClick={() => handlePreview(t, r, jumpUrl)} type="primary" size="small">{intl.formatMessage({ id: 'PREVIEW' })}</Button>
                         <Divider type="vertical" />
-                        <Button onClick={() => handleCopy(jumpUrl)} ghost type="primary" size="small">{intl.formatMessage({ id: 'COPY_LINK' })}</Button>
+                        <Button onClick={() => handleCopy(jumpUrl)} type="primary" size="small">{intl.formatMessage({ id: 'COPY_LINK' })}</Button>
                     </>
                 )
             }
