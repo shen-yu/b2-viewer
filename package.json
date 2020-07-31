@@ -1,5 +1,8 @@
 {
-  "private": true,
+  "name": "b2viewer",
+  "version": "1.0.0",
+  "author": "Shen-Yu <shenyu@hotmail.com>",
+  "license": "GPL-3.0",
   "scripts": {
     "start": "set PORT=3003&&umi dev",
     "dev": "set PORT=3003&&umi dev",
@@ -8,6 +11,11 @@
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
+  },
+  "homepage": "https://github.com/Shen-Yu/b2-viewer",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Shen-Yu/b2-viewer.git"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

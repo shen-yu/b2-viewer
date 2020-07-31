@@ -1,5 +1,7 @@
 # B2Viewer
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Shen-Yu/b2-viewer/b2viewer)
+
 A web file browser for Backblaze B2, based on React.
 
 ## How to use:
