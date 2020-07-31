@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://down.asmrfun.com'
+export const BASE_URL = ''
